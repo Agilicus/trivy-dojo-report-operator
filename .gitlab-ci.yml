@@ -1,0 +1,14 @@
+---
+stages:
+  - lint
+  - autorel
+  - build
+
+include:
+  - project: tooling/pipelines
+    ref: master
+    file: lint-conform.yml
+  - project: tooling/pipelines
+    ref: master
+    file: container-release.yml
+
